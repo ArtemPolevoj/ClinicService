@@ -91,7 +91,7 @@ namespace ClinicService.Services.Impl
 		connection.ConnectionString = connectionString;
 		connection.Open();
 		using SqliteCommand command =
-			new SqliteCommand("UPDATE consultations SET ClientId = @ClientId, PetId = @PetId, ConsultationDate = @ConsultationDate, Description = @Description WHERE ConsultationId=@ConsultationId)", connection);
+			new SqliteCommand("UPDATE consultations SET ClientId = @ClientId, PetId = @PetId, ConsultationDate = @ConsultationDate, Description = @Description WHERE ConsultationId=@ConsultationId", connection);
 		command.Parameters.AddWithValue("@ClientId", item.ClientId);
 		command.Parameters.AddWithValue("@PetId", item.PetId);
 		command.Parameters.AddWithValue("@ConsultationDate", item.ConsultationDate.Ticks);

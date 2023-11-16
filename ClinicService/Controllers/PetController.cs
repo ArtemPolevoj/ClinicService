@@ -25,14 +25,14 @@ namespace ClinicService.Controllers
 			return Ok(_petRepository.Create(pet));
 		}
 
-		[HttpPut("edit")]
-		public IActionResult Update([FromBody] CreatePetRequest createRequest)
+		[HttpPut("update")]
+		public IActionResult Update([FromBody] UpdatePetRequest updateRequest)
 		{
 			Pet pet = new Pet();
-			pet.PetId = createRequest.PetId;
-			pet.ClientId = createRequest.ClientId;
-			pet.Name = createRequest.Name;
-			pet.Birthday = createRequest.Birthday;
+			pet.PetId = updateRequest.PetId;
+			pet.ClientId = updateRequest.ClientId;
+			pet.Name = updateRequest.Name;
+			pet.Birthday = updateRequest.Birthday;
 			return Ok(_petRepository.Create(pet));
 		}
 

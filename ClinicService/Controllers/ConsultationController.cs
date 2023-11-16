@@ -26,7 +26,7 @@ namespace ClinicService.Controllers
 			return Ok(_consultationRepository.Create(con));
 		}
 
-		[HttpPut("edit")]
+		[HttpPut("update")]
 		public IActionResult Update([FromBody] UpdateConsultationReques updateRequest)
 		{
 			Consultation con = new Consultation();

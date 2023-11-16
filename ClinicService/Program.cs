@@ -2,7 +2,6 @@
 using ClinicService.Services;
 using ClinicService.Services.Impl;
 using Microsoft.Data.Sqlite;
-using System.Diagnostics;
 
 namespace ClinicService
 {
