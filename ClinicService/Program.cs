@@ -2,7 +2,6 @@
 using ClinicService.Services;
 using ClinicService.Services.Impl;
 using Microsoft.Data.Sqlite;
-using System.Diagnostics;
 
 namespace ClinicService
 {
@@ -23,9 +22,11 @@ namespace ClinicService
 
             builder.Services.AddControllers();
             builder.Services.AddScoped<IClientRepository, ClientRepository>();
+			builder.Services.AddScoped<IPetRepository, PetRepository>();
+			builder.Services.AddScoped<IConsultationRepository, ConsultationRepository>();
 
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
+			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+			builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();

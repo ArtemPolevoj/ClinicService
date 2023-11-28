@@ -33,7 +33,7 @@ namespace ClinicService.Controllers
             return Ok(_clientRepository.Create(client));
         }
 
-        [HttpPut("edit")]
+        [HttpPut("update")]
         public IActionResult Update([FromBody] UpdateClientRequest updateRequest)
         {
             Client client = new Client();
